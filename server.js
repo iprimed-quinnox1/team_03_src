@@ -1,3 +1,5 @@
+//Server File
+
 var express = require("express");
 var Mongo = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/";
