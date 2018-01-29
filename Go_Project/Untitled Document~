@@ -1,0 +1,58 @@
+<!-- Navbar ================================================== -->
+<div id="logoArea" class="navbar">
+<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
+
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+</a>
+  <div class="navbar-inner">
+    <a class="brand" href="index.html"><img src="themes/images/index.png" alt="Bootsshop" style="width:193px;height:47px;"/></a>
+		<form class="form-inline navbar-search" method="post" action="#elec" >
+		<input id="srchFld" class="srchTxt" type="text" style="padding-top:23px"/>
+		  <select class="srchTxt">
+			<option>All</option>
+			<option>Camping Equipment </option>
+			<option>Golf Equipment </option>
+			<option>Mountaineering Equipment </option>
+			<option>Outdoor Protection </option>
+			<option>Personal Accessories </option>
+		</select> 
+		  <button type="submit" id="submitButton" class="btn btn-success">Go</button>
+    </form>
+    <ul id="topMenu" class="nav pull-right">
+	 
+	 
+	<!-- <li class=""><a href="contact.html">Contact</a></li> -->
+ <button type="button" class="btn btn-success">LOGIN</button>
+<button type="button" class="btn btn-success">REGISTER</button>
+ 
+
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Navbar ================================================== -->
+
+<style>
+.span4:hover {
+-ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+
+}
+</style>
+..............................
+<div id="gallery" class="span3">
+<div class="span4" style="float:left">
+..............
+
+
+<div class="row">	  
+			<div id="gallery" class="span3">
+<div class="span4" style="float:left">
+            <a href="themes/images/products/large/b1.jpg" title="Fujifilm FinePix S29b10 Digital Camera">
+				<img src="themes/images/products/large/b1.jpg" style="width:80%" alt="Fujifilm FinePix S29b10 Digital Camera">
+            </a>
+</div>
+

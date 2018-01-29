@@ -1,0 +1,108 @@
+<h2 ng-show="user._id!=null">Edit</h2>
+<h2 ng-hide="user._id!=null">Create</h2>
+<hr>
+<form name="userForm" ng-submit="saveData(user)" novalidate class="form-horizontal">
+ 
+ 
+    <div class="form-group">
+ <label class="col-md-2">Image</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.img" name="img" ng-required="true" class="form-control" placeholder='Please Enter img url'/>
+ <p ng-show="userForm.img.$error.required && (userForm.$submitted || userForm.img.$dirty)" class="text-danger" >Please Enter img URL</p>
+ </div>
+ </div>
+ 
+ <div class="form-group">
+ <label class="col-md-2">category</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.category" name="category" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.category.$error.required && (userForm.$submitted || userForm.category.$dirty)" class="text-danger">Please Enter category</p>
+ </div>
+ </div>
+ 
+ <div class="form-group">
+ <label class="col-md-2">type</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.type" name="type" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.type.$error.required && (userForm.$submitted || userForm.type.$dirty)" class="text-danger">Please Enter type</p>
+ </div>
+ </div>
+ 
+ 
+  <div class="form-group">
+ <label class="col-md-2">product_name</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.product_name" name="product_name" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.product_name.$error.required && (userForm.$submitted || userForm.product_name.$dirty)" class="text-danger">Please Enter product_name</p>
+ </div>
+ </div>
+ 
+  <div class="form-group">
+ <label class="col-md-2">product_id</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.product_id" name="product_id" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.product_id.$error.required && (userForm.$submitted || userForm.product_id.$dirty)" class="text-danger">Please Enter product_id</p>
+ </div>
+ </div>
+ 
+ <div class="form-group">
+ <label class="col-md-2">product_desc</label>
+ <div class="col-md-10">
+ <textarea name="product_desc" ng-model="user.product_desc" ng-required="true" class="form-control"></textarea>
+ <p ng-show="userForm.product_desc.$error.required && (userForm.$submitted || userForm.product_desc.$dirty)" class="text-danger">Please Enter product_desc</p>
+ </div>
+ </div>
+ 
+ 
+  <div class="form-group">
+ <label class="col-md-2">price</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.price" name="price" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.price.$error.required && (userForm.$submitted || userForm.price.$dirty)" class="text-danger">Please Enter price</p>
+ </div>
+ </div>
+ 
+ 
+   <div class="form-group">
+ <label class="col-md-2">brand</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.brand" name="brand" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.brand.$error.required && (userForm.$submitted || userForm.brand.$dirty)" class="text-danger">Please Enter brand</p>
+ </div>
+ </div>
+ 
+  <div class="form-group">
+ <label class="col-md-2">colour</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.colour" name="colour" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.colour.$error.required && (userForm.$submitted || userForm.colour.$dirty)" class="text-danger">Please Enter colour</p>
+ </div>
+ </div>
+ 
+ 
+   <div class="form-group">
+ <label class="col-md-2">size</label>
+ <div class="col-md-10">
+ <input type="text" ng-model="user.size" name="size" ng-required="true" class="form-control"/>
+ <p ng-show="userForm.size.$error.required && (userForm.$submitted || userForm.size.$dirty)" class="text-danger">Please Enter size</p>
+ </div>
+ </div>
+
+ 
+ <div class="form-group">
+ <label class="col-md-2">product_spec</label>
+ <div class="col-md-10">
+ <textarea name="product_spec" ng-model="user.product_spec" ng-required="true" class="form-control"></textarea>
+ <p ng-show="userForm.product_spec.$error.required && (userForm.$submitted || userForm.product_spec.$dirty)" class="text-danger">Please Enter product_spec</p>
+ </div>
+ </div>
+ 
+ 
+ <div class="form-group">
+ <div class="col-md-offset-2 col-md-10">
+ <input type="submit" value="Update" class="btn btn-primary" ng-show="user._id!=null"/>
+ <input type="submit" value="Save" class="btn btn-primary" ng-hide="user._id!=null"/>
+ <a ui-sref="users" class="btn btn-warning">Cancel</a>
+ </div>
+ </div>
+</form>

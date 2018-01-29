@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="angular/angular.js"></script>
+ <script src="angular-ui-router/release/angular-ui-router.js"></script>
+ 
+ <script src="app.js"></script>
+ <script src="services/service.js"> </script>
+ <script src="controllers/user.controller.js"></script>
+ <script src="services/productsService.js"></script>  
+ <script src="controllers/products.controller.js"></script>
+</head>
+<body style="background-color:light pink">
+<div class="container">
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container-fluid">
+ <div class="navbar-header">
+ <a class="navbar-brand" ui-sref="users"></a>
+ </div>
+ <ul class="nav navbar-nav">
+ <li><a ui-sref="users">Home</a></li>
+ <li><a ui-sref="create">Create</a></li>
+
+ 
+     
+     			 <li> <form class="navbar-form navbar-left">
+            	<div class="input-group">
+                    <input type="text" ng-model="search.product_id" class="form-control" placeholder="Enter product ID" style="height:30px;width:140px;">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn" style="height:30px;width:40px;">
+          <span class="glyphicon glyphicon-search"></span>  
+        </button>
+                    </span>
+                </div>
+            </form></li>
+     
+
+ </ul>
+ </div>
+</nav>
+ <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+<div class="container">
+ <ui-view></ui-view>
+</div>
+</div>
+</body>
+</html>
