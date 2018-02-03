@@ -1,0 +1,45 @@
+
+ <button type="submit" class="btn btn-success" ng-click="cart()" class="btn btn-default">cart</button>
+ <br/>
+<h1>Product Details</h1>
+
+
+<table class="table table-bordered table-striped" >
+ <tr>
+ <th>SNo.</th>
+  <th>Product ID</th>
+ <th>Image</th>
+ <th>Category</th>
+  <th>Type</th>
+ <th>Product Name</th>
+ 
+  <th>Short Descrption</th>
+ <th>Price.</th>
+ <th>Brand</th>
+  <th>Color</th>
+   <th>Size</th>
+    <th>Detailed Specifications</th>
+ </tr>
+ <tr ng-repeat="user in cart">
+ 
+ 
+ <td>{{$index+1}}</td>
+   <td>{{user.product_id}}</td>
+ <td> <img ng-src="{{user.img}}" width="150px" height="150px" alt="Image not found"></td>  
+ <td>{{user.category}}</td>
+ <td>{{user.type}}</td>
+ <td>{{user.product_name}}</td>
+
+   <td>{{user.product_desc}}</td>
+    <td>{{user.price}}</td>
+	 <td>{{user.brand}}</td>
+	  <td>{{user.colour}}</td>
+	   <td>{{user.size}}</td>
+	    <td>{{user.product_spec}}</td>
+ 
+ 
+ </tr>
+</table>
+<div ng-if="users.length==0">
+ No record found !!
+</div>

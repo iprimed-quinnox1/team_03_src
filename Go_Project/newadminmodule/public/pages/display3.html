@@ -1,0 +1,57 @@
+<h1 ng-init="cartss()">display</h1>
+
+ 
+ <br/>
+ 
+ <h1> Mountaineering Equipments</h1>
+<h1>Product Details</h1>
+
+
+<table class="table table-bordered table-striped" >
+ <tr>
+ <th>SNo.</th>
+  <th>Product image</th>
+     <th>Product name</th>
+     <th>Product ID</th>
+ 
+ <th>Product category</th>
+  
+ <th>Product type</th>
+     <th>Product price</th>
+ 
+ <th>Product colour</th>
+  
+ <th>Product size</th>
+ <th>Product dimension</th>
+ <th>Product model</th>
+ 
+ <th>Product weight</th>
+  
+ <th>Product zoom</th>
+ <th> User guidelines </th>
+ 
+ </tr>
+ <tr ng-repeat="x in cart3">
+ <td>{{$index+1}}</td>
+  <td> <img ng-src="{{x.pimage}}" width="150px" height="150px" alt="Image not found"></td> 
+     <td>{{x.pname}}</td> 
+ <td>{{x.pid}}</td>
+  <td>{{x.pcategory}}</td>
+     <td>{{x.ptype}}</td> 
+ <td>{{x.pprice}}</td>
+  <td>{{x.pcolour}}</td>
+      <td>{{x.psize}}</td>
+  <td>{{x.pdimen}}</td>
+  <td>{{x.pmodel}}</td>
+  <td>{{x.pweight}}</td>
+      <td>{{x.zoom}}</td>
+  <td>{{x.pguide}}</td>
+  <td>
+       
+    <button  ng-click="deleteUser3(x)">Delete</button>
+    </td>
+ </tr>
+</table>
+<div ng-if="users.length==0">
+ No record found !!
+</div>

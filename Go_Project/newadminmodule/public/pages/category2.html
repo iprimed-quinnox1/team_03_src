@@ -1,0 +1,149 @@
+
+<h1>Golf Equipment</h1>
+<div id="header" ng-controller="category2">
+<!-- Sidebar end=============================================== -->
+	<div class="span9" class="container-fluid">
+    <!--<ul class="breadcrumb">
+		<li><a href="index1.html">Home</a> <span class="divider">/</span></li>
+		<li class="active"></li>
+    </ul>-->
+	
+    <div class="well" style="background-color:rgb(193, 240, 243)">
+	<form id="res" class="form-horizontal" name="myForm" enctype="multipart/form-data" method="post" ng-submit="sendData()">
+
+        
+	<div class="control-group">
+		<label class="control-label"> Product  Image <sup>*</sup></label>
+		<div class="controls">
+		<input type="text" ng-model="pimage" name="image" placeholder="Enter the umage URL" autofocus required>
+			
+	</div>
+		</div>
+
+	<div class="control-group">
+	<label class="control-label"> Product  Name <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pname" name="name"  autofocus required>
+		
+</div>
+	</div>
+        <div class="control-group">
+	<label class="control-label"> Product  ID <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pid" name="name"  autofocus required>
+		
+</div>
+	</div>
+        <div class="control-group">
+	<label class="control-label"> Product  Category <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pcategory" name="name"  autofocus required>
+		
+</div>
+	</div>
+	
+        <div class="control-group">
+	<label class="control-label"> Product  Type <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="ptype"  name="name"  autofocus required>
+		</div>
+	</div>
+        
+        <div class="control-group">
+	<label class="control-label"> Short Description <sup>*</sup></label>
+	<div class="controls">
+ <textarea name="product_desc" ng-model="pdesc"   autofocus required></textarea>
+ </div>
+ </div>
+        
+        <div class="control-group">
+	<label class="control-label"> Product  Price <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pprice"  name="price"  autofocus required>
+		
+</div>
+	</div>
+        
+        <div class="control-group">
+	<label class="control-label"> Product Brand <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pbrand"  name="brand" autofocus required>
+		
+</div>
+	</div>
+        
+        <div class="control-group">
+	<label class="control-label"> Product  Colour <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pcolour" name="colour"  autofocus required>
+		
+</div>
+	</div>
+
+<div class="control-group">
+	<label class="control-label"> Product Size <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="psize"  name="size" autofocus required>
+		
+</div>
+	</div>
+
+<div class="control-group">
+	<label class="control-label"> Product Dimension <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pdimen"  name="dimen" autofocus required>
+    </div>
+        </div>
+
+	<div class="control-group">
+		<label class="control-label"> Product  Wood type <sup>*</sup></label>
+		<div class="controls">
+		<input type="text" ng-model="pwood" name="name"  autofocus required>
+		
+	</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label"> Product  Iron type <sup>*</sup></label>
+			<div class="controls">
+			<input type="text" ng-model="piron" name="name"  autofocus required>
+			
+		</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label"> Product  Flex <sup>*</sup></label>
+				<div class="controls">
+				<input type="text" ng-model="pflex" name="name"  autofocus required>
+				
+			</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label"> Product  Loft <sup>*</sup></label>
+					<div class="controls">
+					<input type="text" ng-model="ploft" name="name"  autofocus required>
+					
+				</div>
+					</div>
+
+        <div class="control-group">
+	<label class="control-label"> User Guidelines <sup>*</sup></label>
+	<div class="controls">
+ <textarea name="product_desc" ng-model="pguide"   autofocus required></textarea>
+ 
+</br>
+</br>
+<button class="btn btn-large btn-success" type="submit" ng-disabled="myForm.$invalid">Submit</button>
+</div>
+	</div>
+
+</div>
+	</div>
+</form>
+
+
+</div>
+</div>
+</div>
+</html>

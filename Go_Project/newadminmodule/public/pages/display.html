@@ -1,0 +1,50 @@
+<h1 ng-init="cart()">display</h1>
+
+ <br/>
+<h1>Product Details</h1>
+
+
+<table class="table table-bordered table-striped" >
+ <tr>
+<th>sl num</th>
+  <th>Product image</th>
+     <th>Product name</th>
+     <th>Product ID</th>
+ 
+ <th>Product category</th>
+  
+ <th>Product type</th>
+     <th>Short Description</th>
+     <th>Product price</th>
+  <th>Product brand</th>
+ <th>Product colour</th>
+  
+ <th>Product size</th>
+ <th>Product dimension</th>
+     <th>User Guidelines</th>
+ 
+ </tr>
+ <tr ng-repeat="x in cart1" style="height:2px">
+ <!--td>{{x._id}}</td-->
+ <td>{{$index+1}}</td>
+  <td> <img ng-src="{{x.pimage}}" width="150px" height="150px" alt="Image not found"></td> 
+     <td>{{x.pname}}</td> 
+ <td>{{x.pid}}</td>
+  <td>{{x.pcategory}}</td>
+     <td>{{x.ptype}}</td> 
+      <td>{{x.pdesc}}</td> 
+ <td>{{x.pprice}}</td>
+     <td>{{x.pbrand}}</td>
+  <td>{{x.pcolour}}</td>
+      <td>{{x.psize}}</td>
+  <td>{{x.pdimen}}</td>
+     <td style="width:10px">{{x.pguide}}</td>
+     <td>
+       
+        <button  ng-click="deleteUser(x)">Delete</button>
+        </td>
+    </tr>
+</table>
+<div ng-if="users.length==0">
+ No record found !!
+</div>
