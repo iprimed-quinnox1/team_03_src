@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="order.js"></script>
+	<script  src="C:\Users\Pavan\Desktop\GOCart\GreatOutdoorCart2\GreatoutDoorCart\js\index.js"></script>
+	 <!--link rel="stylesheet" href="C:\Users\Pavan\Desktop\GOCart\GreatOutdoorCart2\GreatoutDoorCart\css\style.css"><meta charset="utf-8"-->
+    </head>
+<body ng-app="myApplication" ng-controller="myController">
+    
+<div class="col-lg-12" style="background-color:white;height: 15vh;">
+<a href="home.html"><img src="C:\Users\Pavan\Desktop\GOCart\GreatOutdoorCart2\GreatoutDoorCart\images\GOimage.jpg" alt="no image" style="width:300px;height: 15vh;"></a>
+<div class="form">
+<section>
+<h2> Place Order </h2>
+
+<section>
+
+<section>
+       <table class="table"> 
+         <tr ng-repeat="item in CartData">
+			<td><img ng-src="{{item.url}}" alt="no image" style="width:100px"> </td>
+            <td>{{item.name}}</td>
+			<td>{{item.qty}}</td>
+			<td> {{item.price}}</td>
+			<td>{{item.tprice}}</td>
+			
+				</tr>
+        </table>
+		<table class="table">
+		<tr ng-repeat="x in CartData1">
+			<td> <input type="radio" name="name" name="abc" ng-model="customerSelected">{{x.add1}} </br> {{x.add2}}</br>{{x.city}}</br>{{x.state}}</br>{{x.country}}</br>{{x.phone}}</td>
+				<td> <input type="radio" name="abc"> {{x.sadd1}} </br> {{x.sadd2}}</br>{{x.scity}}</br>{{x.sstate}}</br>{{x.scountry}}</br>{{x.sphone}}</td>
+				<td> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add new address</button></td> </tr>
+	</table>
+				
+<hr size="50px">
+</section>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Address Form</h4>
+        </div>
+        <div class="modal-body">
+          <p>Enter your address.</p>
+          <input type="text" ng-model="name" >
+		  <h6> The Entered Address is : {{name}}</h6>
+        </div>
+        <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="setAddress()">Ok</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+<div class="form">
+<center><button type="button" class="btn btn-success" style="width:350px" > OK </button></center>
+</div>
+</div>
+
+            
+    <script>
+        var myApp = angular.module("myApplication",[]);
+        
+		myApp.controller("myController",function($scope,$http){
+           $http.get("http://localhost:8085").then(function(response){
+		   
+               $scope.CartData = response.data;
+			  // alert(CartData);
+           });
+		   
+		   $http.get("http://localhost:8085/abc").then(function(response){
+               $scope.CartData1 = response.data;
+			    //alert(CartData1);
+        });
+		
+		$scope.name = "varun";
+    alert("In $scope"+$scope.name);
+	
+	
+	$scope.setAddress = function(){
+                var myOb = $scope.name;
+
+				alert("adding to db" + myOb);
+				
+				$http.post("http://localhost:3000/setData",myOb).then(function(response){
+
+						
+                });
+           }	   
+        });
+        
+    </script>
+    </body>
+</html>
