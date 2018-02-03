@@ -1,0 +1,27 @@
+
+	/*add to cart in cart page
+	 myApp.controller('addtocart', function($scope,$http,$rootScope) {
+       		 $scope.addtocart=function()
+                {
+					
+			
+					alert(JSON.stringify($rootScope.cart2));
+						console.log('cart root data in small',$rootScope.cart2);
+					//var myOb = {name:$scope.x};
+					$http.post("http://localhost:3000/addtocart").then(function(response){
+						alert(JSON.stringify($scope.cart2));
+						alert('addtocart back');
+						//$scope.cart2 = response.data;
+						//alert(JSON.stringify($scope.cart2));
+						alert($rootScope.cart2);
+						
+					//$scope.carttwo=response.data;
+					//console.log('xx',response.data);
+					//console.log('cart2',cart2);
+					window.location="http://localhost:3000/#/addtocart";
+													});
+
+                }		
+
+    });
+	*/

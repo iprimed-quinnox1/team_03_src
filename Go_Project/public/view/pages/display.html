@@ -1,0 +1,90 @@
+<!--<h1 ng-init="cart()">display</h1>
+
+-->
+
+<!-- dynamic display data================= -->
+	<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li class="active">bags</li>
+    </ul>
+	<h3>Rucksack <small class="pull-right"> 40 products are available </small></h3>	
+	<hr class="soft"/>
+	
+	<hr class="soft"/>
+	
+	  
+<div id="myTab" class="pull-right">
+ <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
+ <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
+</div>
+<br class="clr"/>
+<div class="tab-content">
+	<!--list view-->
+	<div class="tab-pane" id="listView">
+	
+	
+		<div class="row" ng-repeat="x in cart1">	  
+			<div class="span2">
+				<img ng-src="{{x.pimage}}" ng-click="PD(x.pid)" width="150px" height="150px" alt="Image not found">
+			</div>
+			<div class="span4">
+				<h3>New |{{x.pname}}</h3>
+				<h5>product id | {{x._id}}</h5>				
+				<hr class="soft"/>
+				
+				<p>
+				The great outdoor products
+				</p>
+				<a class="btn btn-small pull-right" ng-click="PD(x.pid)">View Details</a>
+				<br class="clr"/>
+			</div>
+			<div class="span3 alignR">
+			<form class="form-horizontal qtyFrm">
+			<h3> price |₹{{x.pprice}}</h3>
+			<!--<label class="checkbox">
+				<input type="checkbox">  Adds product to compair
+			</label>--><br/>
+			
+			  <a  class="btn btn-large btn-primary" ng-click="addtocart(x)"> Add to cart <i class=" icon-shopping-cart"></i></a>
+			  <a ng-click="PD(x.pid)" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+			
+				</form>
+			</div>
+			<br class="clr"/>
+			<hr class="soft"/>
+		</div>
+		<hr>
+		<br class="clr"/>
+	</div>
+<!-- block view-->
+	<div class="tab-pane  active" id="blockView">
+		<ul class="thumbnails">
+		
+
+		<li class="span3" ng-repeat="x in cart1">
+			  <div class="thumbnail">
+				<a ng-click="PD(x.pid)"><img ng-src="{{x.pimage}}" width="200px" height="200px" alt="Image not found"></a>
+				<div class="caption">
+				  <h5>Name | {{x.pname}}</h5>
+				  <h5>product id | {{x._id}}</h5>
+				  <p> 
+					 
+				  </p>
+				   <h4 style="text-align:center"><a class="btn" ng-click="PD(x.pid)"> <i class="icon-zoom-in"></i></a> <a class="btn" ng-click="addtocart(x)">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">price |₹{{x.pprice}}</a></h4>
+				</div>
+			  </div>
+
+			 
+
+			</li>		
+		  </ul>
+	<hr class="soft"/>
+	</div>
+</div>
+
+	
+			
+</div>
+
+<!-- MainBody End ============================= -->

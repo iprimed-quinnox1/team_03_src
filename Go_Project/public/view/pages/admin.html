@@ -1,0 +1,56 @@
+<h1>admin</h1>
+<div id="header" ng-controller="admin">
+<!-- Sidebar end=============================================== -->
+	<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+		<li class="active">Registration</li>
+    </ul>
+	
+	<div class="well">
+	<form id="res" class="form-horizontal" name="myForm" enctype="multipart/form-data" method="post" ng-submit="sendData()">
+<h4>Your personal information</h4>
+
+	<div class="control-group">
+	<label class="control-label"> product  Name <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pname"  name="name"  autofocus required>
+		<span style="color:red" ng-hide="myForm.name.$valid">Characters only</span>
+</div>
+	</div>
+
+	<div class="control-group">
+	<label class="control-label"> product image <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pimg"  name="name"  autofocus required>
+		</div>
+	</div>
+
+
+<div class="control-group">
+	<label class="control-label"> product category <sup>*</sup></label>
+	<div class="controls">
+        <input type="text" ng-model="pcategory"  name="lname" autofocus required>
+		<span style="color:red" ng-hide="myForm.lname.$valid">Characters only</span>
+</div>
+	</div>
+
+<div class="control-group">
+<label class="control-label"> price </label>
+<div class="controls">
+<input type="text" ng-model="pprice"  name="sphone" ng-disabled="active" required>
+<span style="color:red" ng-show="myForm.sphone.$invalid">Numbers only</span>
+</br>
+</br>
+<button class="btn btn-large btn-success" type="submit" ng-disabled="myForm.$invalid">Submit</button>
+</div>
+	</div>
+
+</div>
+	</div>
+</form>
+
+
+</div>
+</div>
+</div>

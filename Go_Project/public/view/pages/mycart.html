@@ -1,0 +1,44 @@
+<!--
+ <button type="submit" class="btn btn-success" ng-click="cart()" class="btn btn-default">cart</button>
+ <br/>-->
+<h3 ng-init="cart()">My cart</h3>
+
+
+<table class="table table-bordered table-striped" >
+ <tr >
+ <th>SNo.</th>
+  <th>Product ID</th>
+ <th>Image</th>
+ <th> Product Name</th>
+  <th>price</th>
+
+ 
+ 
+  </tr>
+ <tr ng-repeat="x in cart">
+ 
+ <td>{{$index+1}}</td>
+   <td>{{x.pid}}</td>
+ <td> <img ng-src="{{x.img}}" width="150px" height="100px" alt="Image not found"></td>  
+ <td>{{x.name}}</td>
+ <td>{{x.price}}</td>
+ <td>
+ <button type="button" class="btn btn-success" ng-click="deleteitem(x.pid)" ng-init="cart()">Remove</button>
+ <br/>
+  <br/>
+   <br/>
+ <button type="button" class="btn btn-warning">Buy Now</button>
+ </td>
+ 
+ 
+ 
+ 
+ </tr>
+</table>
+<div>
+ <th><pre>                     <bold> Total: 5000</bold>                        <button type="button" class="btn btn-danger">PROCEED TO CHECKOUT</button> </pre> </th>
+</div>
+
+<div ng-if="cart.length==0">
+ <h3>NO items in your cart !!!</h3>
+</div>

@@ -1,0 +1,168 @@
+<!--<div>
+<h1>product details</h1>
+<table class="table">
+<tr>
+<th>id</th>
+<th>name</th>
+<th>price</th>
+<th>img</th>
+<th></th>
+<th></th>
+</tr>
+<tr ng-repeat="cart in cart2">
+<td>{{cart.pid}}</td>
+<td>{{cart.pname}}</td>
+<td> {{cart.pprice}} </td>
+<td><img ng-src="{{cart.pimage}}" ng-click="addtocart()" width="150px" height="150px" alt="Image not found"></td>
+<td>{{cart.pcategory}}</td>
+
+<td>{{cart.ptype}}</td>
+<td>{{cart.pdesc}}</td>
+<td>{{cart.pbrand}}</td>
+<td>{{cart.pcolour}}</td>
+<td>{{cart.psize}}</td>
+<td>{{cart.pdimen}}</td>
+<td>{{cart.pguide}}</td>
+</tr>
+</table>
+</div>
+-->
+
+
+<!-- this  is a common produts details display page=============================================== -->
+	<div class="span9" ng-repeat="cart in cart2">
+    <ul class="breadcrumb">
+    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+    <li><a href="#bags">Products</a> <span class="divider">/</span></li>
+    <li class="active">product Details</li>
+    </ul>
+	
+	<style>
+.span4:hover {
+-ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+
+}
+</style>
+	<div class="row">	  
+			<div id="gallery" class="span3">
+<div class="span4" style="float:left">
+            <a href="themes/images/products/large/b1.jpg" title="Fujifilm FinePix S29b10 Digital Camera">
+			<img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:80%" alt="Image not found">
+				            </a>
+</div>
+			<div id="differentview" class="moreOptopm carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+				  
+                  <span> <a href="themes/images/products/large/b1.jpg"> <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a></span>
+                  <span> <a href="themes/images/products/large/b1.jpg"> <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a></span>
+                  <span> <a href="themes/images/products/large/b1.jpg" > <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a></span>
+                  </div>
+                 <div class="item">
+                   <a href="themes/images/products/large/b1.jpg" > <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a>
+                   <a href="themes/images/products/large/b1.jpg"> <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a>
+                   <a href="themes/images/products/large/b1.jpg"> <img ng-src="{{cart.pimage}}" ng-click="addtocart()" style="width:29%" alt="Image not found"></a>
+                  </div>
+                </div>
+            
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
+			
+              </div>
+			  
+		
+			</div
+				<!--gallery end-->
+			<div class="span6">
+				<h1>{{cart.pname}}</h1>
+				<h5>{{cart.ptype}}</h5>
+				<small>{{cart.pcategory}}: {{cart.pid}}</small>
+				<hr class="soft"/>
+				<form class="form-horizontal qtyFrm">
+				  <div class="control-group">
+					<label class="control-label"><span>₹{{cart.pprice}}</span></label>
+					<div class="controls">
+					<input type="number" class="span1" placeholder="Qty."/>
+					  <button type="submit" class="btn btn-large btn-primary pull-right" ng-click="addtocart(cart)"> Add to cart <i class=" icon-shopping-cart"></i></button>
+					</div>
+				  </div>
+				</form>
+				
+				<hr class="soft"/>
+				<hb1>60 items in stock</hb1>
+				<form class="form-horizontal qtyFrm pull-right">
+				  <div class="control-group">
+					<label class="control-label"><span>{{cart.pcolour}}</span></label>
+					<div class="controls">
+					  <select class="span2">
+						  <option>Pitch Black</option>
+						  <option>Charcoal black</option>
+						  <option>Red</option>
+						  <option>Blue</option>
+						</select>
+					</div>
+				  </div>
+				</form>
+				<hr class="soft clr"/>
+				<p>
+				{{cart.pdesc}}
+
+				</p>
+				<!--<a class="btn btn-small pull-right" href="#detail">More Details</a>-->
+				<br class="clr"/>
+			<a href="#" name="detail"></a>
+			<hr class="soft"/>
+			</div>
+			
+			<div class="span9">
+            <ul id="productDetail" class="nav nav-tabs">
+              <li class="active"><a href="#bag_details" data-toggle="tab">Product Details</a></li>
+              <li><a ng-click="cart('Tents')" data-toggle="tab">Related Products</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade active in" id="home">
+			  <hb1>Product Information</hb1>
+			  
+			  
+                <table class="table table-striped">
+				<tbody>
+				<tr class="techSpecRow"><th colspan="2">Product Details</th></tr>
+				<tr class="techSpecRow"><td class="techSpecTD1">Brand: </td><td class="techSpecTD2">{{cart.pbrand}}</td></tr>
+				<tr class="techSpecRow"><td class="techSpecTD1">Model:</td><td class="techSpecTD2">{{cart.pname}} </td></tr>
+				<tr class="techSpecRow"><td class="techSpecTD1"><span><t6>Released on:</t6></span></td><td class="techSpecTD2"> 2017-11-10</td></tr>
+				
+				<tr class="techSpecRow"><td class="techSpecTD1">Features:</td><td class="techSpecTD2"> 
+				<p>
+			<ul>
+			<P>{{cart.pdimen}}</p><br/>
+				
+			</ul>
+				</p>
+				</td>
+				</tr>
+				<tr class="techSpecRow"><td class="techSpecTD1">MORE detail </td><td class="techSpecTD2"> 
+				<p>
+				{{cart.pguide}}
+				</p>
+				</td></tr>
+				
+				</tbody>
+				</table>
+				
+				
+
+			
+		<!-- add more headers and paragraphs if you eant to add more features-->
+              </div>
+	
+		</div>
+          </div>
+
+	</div>
+</div>
+</div> </div>
+</div>
+<!-- MainBody End ============================= -->
+
